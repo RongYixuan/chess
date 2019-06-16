@@ -3,6 +3,7 @@
 .box{
   width: $w;
   height: $w;
+  background:rgb(213,176,80);
   @include center;
   position: absolute;
   //background: #00c1de;
@@ -20,12 +21,12 @@
   background: black;
 }
 .white{
-  background: red;
+  background: whitesmoke;
 }
 .heng{
   width: $w - $r * 2;
   height: 1px;
-  background: #04a812;
+  background: black;
   position: absolute;
   left: $r;
   transform: translate3d(-300%,0,0);
@@ -34,7 +35,7 @@
 .shu {
   height: $w - $r * 2;
   width: 1px;
-  background: #04a812;
+  background: black;
   position: absolute;
   top: $r;
   transform: translate3d(0,-300%,0);
