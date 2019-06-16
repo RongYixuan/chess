@@ -26,7 +26,7 @@ $(function () {
                 $(this).addClass('black')
                 flag = !flag;
                 if (isSuccess(black, coords) >= 5) {
-                    console.log('黑色赢了');
+                    document.write('黑子胜')
                     box.off('click')
                 }
                 if (ai) {
@@ -35,42 +35,18 @@ $(function () {
                     delete blank[pos]
                     $('#' + pos).addClass('white')
                     if (isSuccess(white, pos) >= 5) {
-                        console.log('白色赢了');
+                        document.write('白子胜')
                         box.off('click')
                     }
                     flag = !flag;
                 }
             }
-        // } else {
-        //     if (_this.hasClass('black') || _this.hasClass('white')) {
-        //         return
-        //     } else {
-        //         white[coords] = true
-        //         delete blank[coords]
-        //         $(this).addClass('white')
-        //         flag = !flag;
-        //         if (isSuccess(white, coords) >= 5) {
-        //             console.log('白色赢了');
-        //             box.off('click')
-        //         }
-                // if (ai) {
-                //     let pos = aifn();
-                //     black[pos] = true;
-                //     delete blank[pos]
-                //     $('#' + pos).addClass('black')
-                //     if (isSuccess(black, coords) >= 5) {
-                //         console.log('赢了');
-                //         box.off('click')
-                //     }
-                //     flag = !flag;
-                // }
-            // }
+        
         }
     })
     function aifn() {
         let blackSore=0,whiteSore=0;
         let pos1,pos2;
-        //遍历空白对象，计算同等条件下最优
         for(let i in blank){
             let sore=isSuccess(black,i);
             if(sore>=blackSore){
@@ -108,7 +84,7 @@ $(function () {
         while (obj[--i + '_' + j]) {
             cz++
         }
-        //yx
+     
         i = x * 1, j = y * 1
         while (obj[--i + '_' + (++j)]) {
             yx++
@@ -118,16 +94,7 @@ $(function () {
         while (obj[++i + '_' + (--j)]) {
             yx++
         }
-        // i = x * 1, j = y * 1
-        // while (obj[--i + '_' + (++j)]) {
-        //     yx++
-        // }
-        // i = x * 1, j = y * 1
-        //
-        // while (obj[++i + '_' + (--j)]) {
-        //     yx++
-        // }
-        //zx
+      
         i = x * 1, j = y * 1
 
         while (obj[++i + '_' + (++j)]) {
